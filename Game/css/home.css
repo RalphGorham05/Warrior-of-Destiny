@@ -1,0 +1,59 @@
+#main_container{
+	background-image:url('../images/world_map.jpg');
+}
+
+#main_menu_container{
+	opacity:0.8;
+	filter:alpha(opacity=80); /* For IE8 and earlier */
+	
+	height:96%;
+	width:35%;
+	
+	margin-top:1.5%;
+	margin-right:auto;
+	margin-bottom:0.5%;
+	margin-left:auto;
+	
+	background-color:purple;
+	border-style:outset;
+	
+	border-radius:14%;
+	-moz-border-radius:14%;
+	-webkit-border-radius:14%;
+}
+
+#main_menu_container ul{
+	width:auto;
+	margin:0.5em, 0, 0, 0;
+	padding:0;
+}
+
+#main_menu_container li{
+	list-style-type: none;
+	padding: 0;
+	margin:  0, 0, 1em, 0;
+}
+
+.block{
+  margin: auto;
+  margin-top:10em;
+  /*position: absolute;*/
+  top: 0; left: 0; bottom: 0; right: 0;
+}
+#corner_btn{
+	font-size:0.2em;
+}
+button{
+	width: 15em;
+	color:red;
+	background-color:black;
+	font:bold;
+	font-size:1em;
+	opacity:1.0;
+	filter:alpha(opacity=100); /* For IE8 and earlier */
+}
+
+button:disabled{
+	color:silver;
+	background-color:gray;
+}

@@ -1,0 +1,94 @@
+logic - using a potion:
+
+the way im thinking of it is, attacking the enemy is sort of the last resort for the npc. It's priority 
+first and foremost is keeping it's health over a 25% threshold. 
+
+If it's health is fine, ap is the next priority. npc checks ap to see if it's low (i'm using 25% threshold there too). 
+If the health is low then just check how low - it's it's under 15% then use a major potion otherwise use a minor potion.
+
+Here's some pseudo-code for it:
+
+$damageCeiling = npc checks to see what damage it's strongest attack will inflict (store it in a variable)
+$damageFloor = npc checks to see what damage it's weakest attack will inflict   (store it in a variable)
+$percentOfMaxHp = npc checks itself to see what percent of it's max hp it has left (store in var)
+
+if( $percentOfMaxHp <= 25 )
+	
+	if( (($damageCeiling+$damageFloor)/3) >= damage points human player's character has left ) //if npc thinks it's attack can kill the enemy, then attack
+		then attack the enemy
+	else
+		then use a health potion
+else if( $percentOfMaxAp <= 25 )
+
+	if( $percentOfMaxAp <= 15 )
+		then use major health potion
+	else
+		then use minor health potion
+		
+else
+	then attack the enemy
+	
+	
+========================================
+logic - critical strike :
+
+$npcLuck = $_SESSION["npc_character"]->getLuck();
+
+$theRange = 0;
+$rangeMax = 50;
+$criticalStrike = false;
+	
+if( $npcLuck == 1 )
+{
+	$theRange = 0;  //no chance of a critical strike
+}
+else if( $npcLuck == 1 || $npcLuck == 2)
+{
+	$theRange = 2;
+	$rangeMax--;
+}
+else if( $npcLuck >= 3 && $npcLuck <= 5)	
+	$theRange = 1;
+	$rangeMax--;
+	
+	if($npcLuck == 4)
+		$rangeMax--;
+	else if($npcLuck == 5)
+		$rangeMax = ($rangeMax - 2);	
+else if( $npcLuck == 6 || $npcLuck == 7)
+	$theRange = 3;
+	$rangeMax = ($rangeMax - 2);
+	
+	if($npcLuck == 7)
+		$rangeMax--;	
+else if( $npcLuck == 8 || $npcLuck == 9)
+{
+	$theRange = 4;
+	$rangeMax = ($rangeMax - 3);
+	
+	if($npcLuck == 9)
+		$rangeMax = ($rangeMax - 2);
+}
+else if( $npcLuck == 10)
+{
+	$theRange = 6;
+	$rangeMax = ($rangeMax - 4);
+}
+
+$luckyNumbers = array();
+while(count($luckyNumbers) < $theRange)
+{
+	$number = mt_rand(1, $rangeMax)
+	if(!in_array($number))
+		$luckyNumbers[$i] = $number;
+}
+
+$findThisforCriticalHit = mt_rand(1, $rangeMax);
+if(in_array($findThisforCriticalHit))
+{
+	$adjustedAttackDamage = ($attackDamage * $_SESSION["npc_character"]->getCriticalHitMultiplier($_SESSION["npc_character"]->getStrength()));
+	$criticalStrike = true;
+}
+
+========================================
+logic - evade attack

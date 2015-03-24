@@ -1,0 +1,34 @@
+#testDiv
+{
+	/*background-image: url("../images/globe.jpg");*/
+	background-size: 100%;
+	height: 100%;
+	
+	font-family: bitfont;
+
+
+}
+
+body
+{
+	background-color: black;
+	color: #01DF01;
+}
+
+
+@font-face
+{
+font-family: bitfont;
+src: url('../fonts/8-bit.ttf');
+}
+
+#testInput
+{
+  padding:5px;
+  background-color: black;
+  border: 1px solid #666;
+  color:#01DF01;
+  text-decoration:none;
+  font-family: bitfont;
+
+}

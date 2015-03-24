@@ -1,0 +1,103 @@
+button
+{
+	width:100%;
+}
+body
+{
+	background-color:black;
+	border-style:dotted;
+	border-width:thin;
+	font-family:"Arial Black", Gadget, sans-serif;
+}
+#enemy_position
+{
+	background-color:white;
+}
+
+#title
+{
+	color:white;
+}
+#player_position
+{
+	background-color:white;
+	width:100%;
+	margin-left:auto;
+	margin-right:auto;	
+}
+
+.tbl_status_display
+{
+	width:60%;
+	margin-left:auto;
+	margin-right:auto;
+	color:white;
+	background-color:tan;
+}
+
+.status_display
+{
+	border-style:outset;
+	width:60%;
+	margin-left:auto;
+	margin-right:auto;
+}
+
+#container
+{
+	width:100%;
+	font-family:"Arial Black", Gadget, sans-serif;
+}
+#tbl_console
+{
+}
+
+#tbl_main
+{
+	color:black;
+	width:80%;
+	margin-left:auto;
+	margin-right:auto;
+	
+}
+
+table tr td
+{
+	-moz-border-radius:5%;
+	-webkit-border-radius:5%;
+	background-color:white;
+	overflow:hidden;
+	font-family:"Arial Black", Gadget, sans-serif;
+}
+
+#text_console
+{
+	border-style:groove;
+	line-height:250%;
+	font-family:"Arial Black", Gadget, sans-serif;
+}
+
+.no_round
+{
+	-moz-border-radius:0;
+	-webkit-border-radius:0;
+	background-color:red;
+}
+
+.tbl_console table 
+{
+	background-color:white;
+	overflow:hidden;
+	border:black thick;
+	font-family:"Arial Black", Gadget, sans-serif;
+}
+
+a:link
+{
+	text-decoration:none;
+}
+
+a:visited 
+{
+	text-decoration:none;
+}

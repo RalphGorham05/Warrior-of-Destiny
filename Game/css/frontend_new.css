@@ -1,0 +1,80 @@
+@font-face
+{
+	font-family: oldStyleFont;
+	/*src: url(../fonts/Blox2.ttf);*/
+}
+
+body
+{
+	background-color:black;
+}
+
+#header
+{
+	height: 1em;
+	width: 100%;
+	
+	margin-top:0;
+	margin-right:auto;
+	margin-bottom:0.2em;
+	margin-left:auto;
+	
+	font-family:oldStyleFont;
+	font-size:4.5em;
+	color:silver;
+	text-shadow: 1px 1px blue;
+	
+	background-color:transparent;
+}
+
+#main_container
+{
+	height:85%;
+	width:83%;
+	
+	margin-top:0;
+	margin-right:auto;
+	margin-bottom:0;
+	margin-left:auto;
+	
+	padding:0.2em;
+	
+	border:dotted silver;
+	
+	/*background-color:transparent;*/
+	background-image:url('../images/world_map.jpg');
+}
+
+
+
+container items
+@keyframes scroller
+{
+	0% {top: 8em}
+	50% {right:10em }
+	75%{ left:10em}
+	100%{top: -11em}
+}
+
+@-webkit-keyframes scroller
+{
+	0% {top: 8em}
+	100%{top: -1em}
+}
+
+@-moz-keyframes scroller{
+	0% {top: 8em}
+	100%{top: -1em}
+}
+
+#storyscroll{
+	position:relative;
+	line-height:1.5em;	
+	font-size: 2em;
+	animation:scroller 10s linear;
+	-webkit-animation:scroller 10s linear;
+	-moz-animation:scroller 10s linear;
+	color:black;
+	z-index:1;
+}
+end

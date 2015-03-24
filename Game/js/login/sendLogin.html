@@ -1,0 +1,31 @@
+<html>
+	<head>
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js" ></script>
+		<script type="text/javascript">
+		function postLoginCredentials(idInputElement, pwInputElement)
+		{
+			var userName = document.getElementById("login_username").value;
+			var userPassword = document.getElementById("login_pw").value;
+
+			var request = new Object();
+			request.action = "login_user";
+			request.username = userName;
+			request.password = userPassword;
+
+			request = JSON.stringify(request);
+			console.log(request);
+			$.post("../../php/login_scripts/login.php", request, postLoginCallback);
+		}
+
+		function postLoginCallback(data)
+		{
+			console.log(data);
+		}
+		</script>
+	</head>
+	<body>
+			<input id="login_username" type="text"/>
+			<input id="login_pw" type="text"/>
+			<button id="btn_submit" onclick="postLoginCredentials()">Log In</button>
+	</body>
+</html>

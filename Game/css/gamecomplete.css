@@ -1,0 +1,22 @@
+#CompleteContainer
+{
+	background-image: url("../images/completebg.jpg");
+	background-size: 100%;
+	border: solid;
+	border-color: darkgoldenrod;
+}
+
+#completeTitle
+{
+	color: red;
+	font-family: oldFont;
+	font-size: 90px;
+}
+
+
+#completeText
+{
+	font-size: 25px;
+	color: darkslategray;
+	font-family: fanFont;
+}

@@ -1,0 +1,77 @@
+body
+{
+	background-color:black;
+	border-style:dotted;
+	border-width:thin;
+	font-family:"Arial Black", Gadget, sans-serif;
+}
+select
+{
+	width:100%;
+}
+
+#header
+{
+	margin:0;
+	width:100%;
+	background-color:black;
+}
+
+#content_section{
+	width:100%;
+	background-color:gray;
+	margin-left:auto;
+	margin-right:auto;
+}
+
+#description
+{
+	width:100%;
+	background-color:orange;
+	margin-left:auto;
+	margin-right:auto;
+	color:black;
+}
+
+#tbl_main
+{
+	border-style:outset;
+	/*border-color:white;*/
+	color:black;
+	height:50%;
+}
+
+#content_section table tr td
+{
+	width:33.3%;
+}
+
+#tbl_name_field
+{
+	margin-top:0;
+	margin-left:1.5%;
+	margin-right:auto;
+	color:white;
+}
+
+#content_section
+{
+	font-weight:bold;
+}
+
+#btn_go_to_attr
+{
+	width:100%;
+	margin-top:5%;
+}
+
+#tbl_attr_display
+{
+	border:none;
+	color:black;
+}
+
+#tbl_attr_display td label
+{
+	font-weight:bold;
+}

@@ -1,0 +1,67 @@
+body
+{
+	background-color:black;
+	color:white;
+	border-style:dotted;
+	border-width:thin;
+	font-family:"Arial Black", Gadget, sans-serif;
+}
+
+#container
+{
+	width:100%;
+	font-family:"Arial Black", Gadget, sans-serif;
+}
+
+#tbl_main
+{
+	color:white;
+	width:77%;
+	margin-left:auto;
+	margin-right:auto;
+}
+
+#tbl_main ul li
+{
+	color:white;
+	list-style-type:none;
+	font-size:2.7em;
+	margin-right:0;
+	margin-left:0;
+	margin-bottom:1em;
+}
+
+#tbl_main ul li:hover
+{
+	color:red;
+}
+
+#main_content
+{
+	width:100%;
+}
+
+.narrow_td
+{
+	width:25%;
+	margin:0;
+	background-color:silver;
+	color:black;
+}
+
+.wide_td
+{
+	width:70%;
+	height:100%;
+	margin:0;
+}
+
+#location_img
+{
+	width:100%;
+	height:100%;
+	margin:0;
+	background-image:url('../../images/locations/earth.jpg'); /*default background image*/;
+	background-size:90% 100%;
+	background-repeat:no-repeat;
+}
