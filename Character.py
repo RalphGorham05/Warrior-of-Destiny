@@ -46,34 +46,26 @@ class Character:
     #character actions
     #inventory related
     def showInventory(self):
-        if len(self.inventory) == 0:
+        if not self.inventory:
             print 'EMPTY'
         else:
             for item in self.inventory:
                 print item
+    
 
-
-    def getFirstFreeInventorySlot(self):
-        idx = ''
-        for item in self.inventory:
-            if item == None:
-                idx = item
-                break
-        return idx #if idx is null then player inventory is full
-
-
-    def addToInventory(potion):
-	slot = self.getFirstFreeInventorySlot()
-	if slot == None:
-            print "\nNo room in your inventory!\n"
-	    return false;
+    def addToInventory(self, item):
+        full = 4
+        if len(self.inventory) == full:
+            print "No room in your inventory!"
+            return False;
 	    
-	else:
-	    self.inventory[slot] = potion
-	    print "\nItem successfully added to inventory.\n"
-	    return true;
-
-    def equip(inventorySlot):
+        else:
+            self.inventory.append(item)
+            print item + " successfully added to inventory."
+            return True;
+       
+    '''
+    def equip(self, inventorySlot):
 	selection = self.inventory[inventorySlot]
 		$type = get_class($selection);
 		
@@ -83,9 +75,13 @@ class Character:
 			echo "\nYou can not equip a {$type} -- only weapons may be equipped.\n";
 		else
 			echo "\n{$type} now equiped.\n";
+    '''
 
 c = Character()
 c.getInfo()
-l = c.getLevel()
-print 'level is ' + str(l)
+c.inventory = ['sword', 'gun','potion','knife']
+c.addToInventory('pot')
+print c.inventory
+
+
 
