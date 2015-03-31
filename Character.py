@@ -57,12 +57,12 @@ class Character:
         full = 4
         if len(self.inventory) == full:
             print "No room in your inventory!"
-            return False;
+            return False
 	    
         else:
             self.inventory.append(item)
             print item + " successfully added to inventory."
-            return True;
+            return True
        
     '''
     def equip(self, inventorySlot):
@@ -75,7 +75,13 @@ class Character:
 			echo "\nYou can not equip a {$type} -- only weapons may be equipped.\n";
 		else
 			echo "\n{$type} now equiped.\n";
+
     '''
+
+    def usePotion(self, playerHp):
+        hpToAdd = playerHp * 0.07 #boots HP by 7% of players full HP
+        return hpToAdd
+	
 
 c = Character()
 c.getInfo()
