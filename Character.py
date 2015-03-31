@@ -24,6 +24,7 @@ class Character:
     def getInfo(self):
         print "Character Info:\nName:" + self.userName + "\nLevel: " + str(self.level)+ "\nHP: " + str(self.hitPoints)
 
+    '''not needed
     #getter functions
     def getHP(self):
         return self.hitPoints
@@ -42,6 +43,7 @@ class Character:
     
     def getAttackList(self):
         return self.attackList
+    '''
 
     #character actions
     #inventory related
@@ -84,6 +86,9 @@ class Character:
 	
 
 c = Character()
+c.hitPoints = 100
+hit = c.hitPoints
+print hit
 c.getInfo()
 c.inventory = ['sword', 'gun','potion','knife']
 c.addToInventory('pot')
