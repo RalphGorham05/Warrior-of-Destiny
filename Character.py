@@ -24,26 +24,6 @@ class Character:
     def getInfo(self):
         print "Character Info:\nName:" + self.userName + "\nLevel: " + str(self.level)+ "\nHP: " + str(self.hitPoints)
 
-    '''not needed
-    #getter functions
-    def getHP(self):
-        return self.hitPoints
-    
-    def getAP(self):
-        return self.attackPoints
-
-    def getUserName(self):
-        return self.userName
-    
-    def getLevel(self):
-        return self.level
-    
-    def getAliveStatus(self):
-        return self.aliveStatus
-    
-    def getAttackList(self):
-        return self.attackList
-    '''
 
     #character actions
     #inventory related
@@ -83,7 +63,44 @@ class Character:
     def usePotion(self, playerHp):
         hpToAdd = playerHp * 0.07 #boots HP by 7% of players full HP
         return hpToAdd
+
+    #AP/HP related
+    def isCharacterDead(self, health):
+        if health <= 0:
+            self.aliveStatus = False
+
+    '''      
+    def getApCost(attackArr, choosenAttack):
+        foreach($attackArr as $attackOption)            #this determines which attack the user actually choose 
+		{					#then gets the AP cost
+			if($attackOption->getFriendlyName() == $choosenAttack)
+			{
+				$attackApCost = $attackOption->getStandardApCost();
+				return $attackApCost;
+			}
+		}
+		return -1;
+
+    def getAttackDamage($attackArr, $choosenAttack):
+	{
+		foreach($attackArr as $attackOption)            //this determines which attack the user actually choose 
+		{														  //then applies the correct damage to the enemy
+			if($attackOption->getFriendlyName() == $choosenAttack)
+			{
+				$damageFromAttack = $attackOption->getStandardHpDmg();
+				return $damageFromAttack;
+			}
+		}
+		return -1;
+    '''
 	
+    def takeHit(dmg):
+	hp = self.hitPoints - dmg
+	if hp < 0:
+            self.hitPoints = 0
+	else:
+	    self.hitPoints = hp;	
+		 
 
 c = Character()
 c.hitPoints = 100
