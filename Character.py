@@ -99,8 +99,29 @@ class Character:
 	if hp < 0:
             self.hitPoints = 0
 	else:
-	    self.hitPoints = hp;	
-		 
+	    self.hitPoints = hp
+
+    def meetsApRequirement(moveApCost):
+	if moveApCost <= self.attackPoints:
+            return True
+        else:
+	    return false
+
+    def deductAp(apPoints):
+	newAp = self.attackPoints - apPoints
+	if newAp < 0:
+            self.attackPoints = 0
+	else:
+	    self.attackPoints = newAp
+    '''
+    #show players attack list
+    def showAttackFriendlyName(arr):
+	foreach($arr as $attackOption)
+		{
+			if($attackOption != null)
+				echo "{$attackOption->getFriendlyName()}\n"
+	
+    '''	 
 
 c = Character()
 c.hitPoints = 100
