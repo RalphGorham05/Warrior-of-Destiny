@@ -121,7 +121,41 @@ class Character:
 			if($attackOption != null)
 				echo "{$attackOption->getFriendlyName()}\n"
 	
-    '''	 
+    '''
+
+    #modify this function to pass in the users chi attribute 
+    #evaluate the attribute to 
+    def giveBackAp(chiAttribute):
+        multiplier = 0
+        
+        if chiAttribute == 1:
+	    multiplier = 0.01
+	elif chiAttribute == 2:
+	    mutliplier = 0.02
+	elif chiAttribute == 3:
+	    mutliplier = 0.03
+	elif chiAttribute == 4:
+	    mutliplier = 0.04
+	elif chiAttribute == 5:
+	    mutliplier = 0.05
+	elif chiAttribute == 6:
+	    mutliplier = 0.06
+	elif chiAttribute == 7:
+	    mutliplier = 0.07
+	elif chiAttribute == 8:
+	    mutliplier = 0.08
+	elif chiAttribute == 9:
+	    mutliplier = 0.09
+	elif chiAttribute >= 10:
+	    mutliplier = 0.1
+			
+	numOfAp = ceil(($this->maxAttackPoints * $mutliplier));  //round up to the nearest integer
+		
+	if(self.attackPoints + numOfAp) > self.maxAttackPoints:
+            self.attackPoints = self.maxAttackPoints
+	else:
+	    self.attackPoints = (self.attackPoints + numOfAp)
+	
 
 c = Character()
 c.hitPoints = 100
