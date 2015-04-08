@@ -149,12 +149,40 @@ class Character:
 	elif chiAttribute >= 10:
 	    mutliplier = 0.1
 			
-	numOfAp = ceil(($this->maxAttackPoints * $mutliplier));  //round up to the nearest integer
+	#numOfAp = ceil(($this->maxAttackPoints * $mutliplier));  //round up to the nearest integer
 		
 	if(self.attackPoints + numOfAp) > self.maxAttackPoints:
             self.attackPoints = self.maxAttackPoints
 	else:
 	    self.attackPoints = (self.attackPoints + numOfAp)
+
+
+
+    def getCriticalHitMultiplier(strengthAttribute):
+	multiplier = 0
+		
+	if strengthAttribute == 1:
+            multiplier = 0.01
+	elif strengthAttribute == 2:
+	    multiplier = 0.02
+	elif strengthAttribute == 3:
+	    multiplier = 0.03
+	elif strengthAttribute == 4:
+	    multiplier = 0.04
+	elif strengthAttribute == 5:
+	    multiplier = 0.05
+	elif strengthAttribute == 6:
+	    multiplier = 0.06
+	elif strengthAttribute == 7:
+	    multiplier = 0.07
+	elif strengthAttribute == 8:
+	    multiplier = 0.08
+	elif strengthAttribute == 9:
+	    multiplier = 0.09
+	elif strengthAttribute >= 10:
+	    multiplier = 0.1
+		
+	return multiplier
 	
 
 c = Character()
