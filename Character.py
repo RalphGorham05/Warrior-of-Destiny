@@ -184,7 +184,7 @@ class Character:
 		
 	return multiplier
 	
-
+'''
 c = Character()
 c.hitPoints = 100
 hit = c.hitPoints
@@ -193,6 +193,6 @@ c.getInfo()
 c.inventory = ['sword', 'gun','potion','knife']
 c.addToInventory('pot')
 print c.inventory
-
+'''
 
 
