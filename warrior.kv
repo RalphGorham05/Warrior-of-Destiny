@@ -1,0 +1,37 @@
+#: import SwapTransition kivy.uix.screenmanager.SwapTransition
+
+
+ScreenManagement:
+    transition: SwapTransition()
+    MainScreen: 
+    HelpScreen:
+	VoiceScreen:
+	
+<MainScreen>:
+    name: 'main'
+	
+	FloatLayout:
+		size:(600,800)
+		Button:
+			on_release: app.root.current = 'help'
+			text: 'Press here to go to help screen'
+			font_size: 15
+			pos: (300,300)
+				
+		Button:
+			on_release: app.root.current = 'voice'
+			text: 'Press here if you want to run with voice'
+			font_size: 15
+			pos: (300,100)
+            
+<HelpScreen>:
+    name: 'help'
+	GridLayout:
+		cols: 2
+		Label:
+			text: 'hhlherad\n sfadsjfsdfasdf sdfadsf'
+	
+		
+
+<VoiceScreen>:
+    name: 'voice'
