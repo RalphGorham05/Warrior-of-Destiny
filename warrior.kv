@@ -11,25 +11,41 @@ ScreenManagement:
     name: 'main'
 	
 	FloatLayout:
-		size:(600,800)
+		size:(800,800)
 		Button:
 			on_release: app.root.current = 'help'
 			text: 'Press here to go to help screen'
-			font_size: 15
-			pos: (300,300)
+			font_size: 10
+			size_hint:(.25, .1)
+			pos: (200,100)
 				
 		Button:
 			on_release: app.root.current = 'voice'
 			text: 'Press here if you want to run with voice'
-			font_size: 15
-			pos: (300,100)
+			font_size: 10
+			size_hint:(.25, .1)
+			pos: (200,150)
+			
+		Button:
+			on_release: app.root.current = 'voice'
+			text: 'Press here if you want to run with voice'
+			font_size: 10
+			size_hint:(.25, .1)
+			pos: (200,200)
             
 <HelpScreen>:
     name: 'help'
-	GridLayout:
-		cols: 2
+	FloatLayout:
+		size: (800,800)
+		Button:
+			on_release: app.root.current = 'main'
+			text: 'Press here to go back home'
+			font_size: 10
+			size_hint:(.25, .1)
+			pos: (0,700)
+		
 		Label:
-			text: 'hhlherad\n sfadsjfsdfasdf sdfadsf'
+			text: 'how to play \n first dothis'
 	
 		
 
