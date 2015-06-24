@@ -7,13 +7,13 @@ from kivy.lang import Builder
 from kivy.uix.screenmanager import ScreenManager, Screen, FadeTransition
 
 
-class MainScreen(Screen):
+class HomeScreen(Screen):
     pass
 
 class HelpScreen(Screen):
     pass
 
-class VoiceScreen(Screen):
+class RegisterScreen(Screen):
     pass
 
 class ScreenManagement(ScreenManager):

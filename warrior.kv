@@ -3,12 +3,12 @@
 
 ScreenManagement:
     transition: SwapTransition()
-    MainScreen: 
+    HomeScreen: 
     HelpScreen:
-	VoiceScreen:
+	RegisterScreen:
 	
-<MainScreen>:
-    name: 'main'
+<HomeScreen>:
+    name: 'home'
 	
 	FloatLayout:
 		size:(800,800)
@@ -20,8 +20,8 @@ ScreenManagement:
 			pos: (200,100)
 				
 		Button:
-			on_release: app.root.current = 'voice'
-			text: 'Press here if you want to run with voice'
+			on_release: app.root.current = 'register'
+			text: 'Join the Warrior Ranks'
 			font_size: 10
 			size_hint:(.25, .1)
 			pos: (200,150)
@@ -38,16 +38,27 @@ ScreenManagement:
 	FloatLayout:
 		size: (800,800)
 		Button:
-			on_release: app.root.current = 'main'
+			on_release: app.root.current = 'home'
 			text: 'Press here to go back home'
 			font_size: 10
 			size_hint:(.25, .1)
-			pos: (0,700)
+			pos: (0,550)
 		
 		Label:
-			text: 'how to play \n first dothis'
+			text: 'About Warrior of Destiny'
+			text: 'Game Objective'
+			text: 'You choose your character based on whether you are good or evil.You must defeat each character in all the locations on each continent. Once you beat each character, you will then fight a boss character.\n If you beat the boss character, you will have conquered that continent. You can select another continent to conquer until you finish them all. After that, you fight\n the Game boss to see if you are a true warrior of Destiny.'
+			font_name: 'fonts\Halo3.ttf'
 	
 		
 
-<VoiceScreen>:
-    name: 'voice'
+<RegisterScreen>:
+    name: 'register'
+	FloatLayout:
+		size: (800,800)
+		Button:
+			on_release: app.root.current = 'home'
+			text: 'Press here to go back home'
+			font_size: 10
+			size_hint:(.25, .1)
+			pos: (0,550)
