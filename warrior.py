@@ -7,6 +7,18 @@ from kivy.lang import Builder
 from kivy.uix.screenmanager import ScreenManager, Screen, FadeTransition
 
 
+from kivy.graphics import Color, Rectangle
+from kivy.uix.image import AsyncImage
+from kivy.uix.floatlayout import FloatLayout
+
+
+class CustomLayout(FloatLayout):
+
+    def __init__(self, **kwargs):
+        # make sure we aren't overriding any important functionality
+        super(CustomLayout, self).__init__(**kwargs)
+
+
 class HomeScreen(Screen):
     pass
 
