@@ -8,12 +8,14 @@ ScreenManagement:
 	RegisterScreen:
 
 <CustomLayout>
-    canvas.before:
+    canvas.after:
         Color:
-            rgba: 0, 40, 0, 40
-        Rectangle:
-            pos: self.pos
-            size: self.size
+            rgba: 255, 0, 255, 1
+			
+		Rectangle:
+			pos: (20,20)
+			size: (100,100)
+        
 
 <HomeScreen>:
     name: 'home'
@@ -28,8 +30,6 @@ ScreenManagement:
 
         Label:
     		text: 'Warrior of Destiny'
-            Color:
-                rgba: 0, 40, 1, 40
     		font_name: 'fonts\Halo3.ttf'
     		font_size: 25
     		pos_hint: {'center_x':.5, 'y':0}
@@ -39,21 +39,21 @@ ScreenManagement:
 			text: 'Press here to go to help screen'
 			font_size: 10
 			size_hint:(.25, .1)
-			pos: (200,100)
+			pos_hint: {'center_x':.5, 'y':.2}
 
 		Button:
 			on_release: app.root.current = 'register'
 			text: 'Join the Warrior Ranks'
 			font_size: 10
 			size_hint:(.25, .1)
-			pos: (200,150)
+			pos_hint: {'center_x':.5, 'y':.5}
 
 		Button:
 			on_release: app.root.current = 'voice'
 			text: 'Press here if you want to run with voice'
 			font_size: 10
 			size_hint:(.25, .1)
-			pos: (200,200)
+			pos_hint: {'center_x':.5, 'y':.35}
 
 <HelpScreen>:
     name: 'help'
