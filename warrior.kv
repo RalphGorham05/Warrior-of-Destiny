@@ -6,16 +6,17 @@ ScreenManagement:
     HomeScreen:
     HelpScreen:
 	RegisterScreen:
+    ContinueScreen:
 
 <CustomLayout>
     canvas.after:
         Color:
-            rgba: 255, 0, 255, 1
-			
+            rgba: 255, 0, 255, .7
+
 		Rectangle:
-			pos: (20,20)
-			size: (100,100)
-        
+			pos: (200,200)
+			size: (50,59)
+
 
 <HomeScreen>:
     name: 'home'
@@ -30,16 +31,17 @@ ScreenManagement:
 
         Label:
     		text: 'Warrior of Destiny'
+            color: 0, 0, 0, 1
     		font_name: 'fonts\Halo3.ttf'
-    		font_size: 25
-    		pos_hint: {'center_x':.5, 'y':0}
+    		font_size: 75
+    		pos_hint: {'center_x':.5, 'y':.3}
 
 		Button:
 			on_release: app.root.current = 'help'
 			text: 'Press here to go to help screen'
 			font_size: 10
 			size_hint:(.25, .1)
-			pos_hint: {'center_x':.5, 'y':.2}
+			pos_hint: {'center_x':.5, 'y':.3}
 
 		Button:
 			on_release: app.root.current = 'register'
@@ -49,47 +51,99 @@ ScreenManagement:
 			pos_hint: {'center_x':.5, 'y':.5}
 
 		Button:
-			on_release: app.root.current = 'voice'
-			text: 'Press here if you want to run with voice'
+			on_release: app.root.current = 'continue'
+			text: 'Continue saved Game'
 			font_size: 10
 			size_hint:(.25, .1)
-			pos_hint: {'center_x':.5, 'y':.35}
+			pos_hint: {'center_x':.5, 'y':.4}
 
 <HelpScreen>:
     name: 'help'
 	FloatLayout:
-		size: (800,800)
+
+        Image:
+            source: 'Game\images\world_map.jpg'
+            allow_stretch: True
+            keep_ratio: False
+            size_hint: 1, 1
+            pos_hint: {'center_x':.5, 'center_y': .5}
+
 		Button:
 			on_release: app.root.current = 'home'
 			text: 'Press here to go back home'
 			font_size: 10
 			size_hint:(.25, .1)
-			#pos: (0,550)
 			pos_hint: {'right':.2, 'top':1}
 
 		Label:
 			text: 'About Warrior of Destiny'
-			font_name: 'fonts\Halo3.ttf'
-			font_size: 20
-			#pos: (100,200)
+			font_name: 'fonts\8-BIT.ttf'
+			font_size: 30
 			pos_hint: {'center_x':.5, 'y':.3}
 
 		Label:
 			text: 'Game Objective'
-			font_size: 15
-			#pos: (50,100)
+            font_name: 'fonts\8-BIT.ttf'
+			font_size: 20
 			pos_hint: {'center_x':.5, 'y':.2}
 
 		Label:
 			text: 'You choose your character based on whether you are good or evil.\n You must defeat each character in all the locations on each continent. Once you beat each character, you will then fight a boss character.\n If you beat the boss character, you will have conquered that continent. You can select another continent to conquer until you finish them all. After that, you fight\n the Game boss to see if you are a true warrior of Destiny.'
-			font_size: 10
+			font_name: 'fonts\Halo3.ttf'
+            font_size: 10
 			#pos: (100,50)
 			pos_hint: {'x':.3, 'y':.1}
+
+        Label:
+			text: 'Game Controls'
+            font_name: 'fonts\8-BIT.ttf'
+			font_size: 20
+			pos_hint: {'center_x':.5, 'y':.05}
+
+        Label:
+			text: 'You select a move based on your available AP. You have 4 potions in your inventory to choose from, which either restore some HP or AP.'
+			font_name: 'fonts\Halo3.ttf'
+            font_size: 10
+			#pos: (100,50)
+			pos_hint: {'x':.3, 'y':.025}
 
 
 
 <RegisterScreen>:
     name: 'register'
+	FloatLayout:
+
+		Button:
+			on_release: app.root.current = 'home'
+			text: 'Press here to go back home'
+			font_size: 10
+			size_hint:(.25, .1)
+			pos: (0,550)
+
+        Label:
+			text: 'Join your path of Destiny'
+			font_size: 30
+			pos_hint: {'center_x':.5, 'y':.3}
+
+        Label:
+			text: 'Choose Username'
+			font_size: 20
+			pos_hint: {'center_x':.5, 'y':.25}
+
+        Label:
+			text: 'Enter Password'
+			font_size: 20
+			pos_hint: {'center_x':.5, 'y':.2}
+
+        Label:
+			text: 'Confirm Password'
+			font_size: 20
+			pos_hint: {'center_x':.5, 'y':.15}
+
+
+
+<ContinueScreen>:
+    name: 'continue'
 	FloatLayout:
 		size: (800,800)
 		Button:

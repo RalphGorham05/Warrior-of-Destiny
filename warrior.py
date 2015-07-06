@@ -4,11 +4,10 @@ kivy.require('1.8.0') # replace with your current kivy version !
 #imports for Screens
 from kivy.app import App
 from kivy.lang import Builder
-from kivy.uix.screenmanager import ScreenManager, Screen, FadeTransition
+from kivy.uix.screenmanager import ScreenManager, Screen
 
 
 from kivy.graphics import Color, Rectangle
-from kivy.uix.image import AsyncImage
 from kivy.uix.floatlayout import FloatLayout
 
 
@@ -26,6 +25,9 @@ class HelpScreen(Screen):
     pass
 
 class RegisterScreen(Screen):
+    pass
+
+class ContinueScreen(Screen):
     pass
 
 class ScreenManagement(ScreenManager):
