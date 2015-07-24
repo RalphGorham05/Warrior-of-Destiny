@@ -126,13 +126,16 @@ ScreenManagement:
 <RegisterScreen>:
     name: 'register'
 	FloatLayout:
+	
+		username_box: username
+		password_box: password
 
 		Button:
 			on_release: app.root.current = 'home'
 			text: 'Press here to go back home'
 			font_size: 10
 			size_hint:(.25, .1)
-			pos: (0,550)
+			pos_hint: {'right':.2, 'top':1}
 
         Label:
 			text: 'Join your path of Destiny'
@@ -142,22 +145,52 @@ ScreenManagement:
         Label:
 			text: 'Choose Username'
 			font_size: 20
-			pos_hint: {'center_x':.5, 'y':.25}
+			pos_hint: {'center_x':.37, 'y':.13}
 
-        TextInput:
-            text: 'Username'
-            size_hint: (.1, .1)
-            pos_hint: (100,100)
+       
+		TextInput:
+			id: username
+			size_hint: (.2, .05)
+            pos_hint: {'center_x':.6, 'y':.61}
 
         Label:
 			text: 'Enter Password'
 			font_size: 20
-			pos_hint: {'center_x':.5, 'y':.2}
+			pos_hint: {'center_x':.37, 'y':.07}
+			
+		TextInput:
+			id: password
+			size_hint: (.2, .05)
+            pos_hint: {'center_x':.6, 'y':.55}
+			password: True
 
         Label:
 			text: 'Confirm Password'
 			font_size: 20
-			pos_hint: {'center_x':.5, 'y':.15}
+			pos_hint: {'center_x':.37, 'y':.015}
+			
+		TextInput:
+			id: c_password
+			size_hint: (.2, .05)
+            pos_hint: {'center_x':.6, 'y':.49}
+			password: True
+			
+		Button:
+			id: register_button
+			on_press: root.validate_password(register_button, password, c_password)
+			text: 'Register'
+			font_size: 10
+			size_hint:(.25, .1)
+			pos_hint: {'center_x':.37, 'y':.08}
+			
+		Button:
+			id: reset_button
+			on_press: root.reset(register_button)
+			text: 'Reset'
+			font_size: 10
+			size_hint:(.25, .1)
+			pos_hint: {'center_x':.65, 'y':.08}
+			
 
 
 
