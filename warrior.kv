@@ -74,6 +74,7 @@ ScreenManagement:
 			font_size: 10
 			size_hint:(.25, .1)
 			pos_hint: {'right':.2, 'top':1}
+            background_color: (255, 0, 255, .7)
 
 		Label:
 			text: 'About Warrior of Destiny'
@@ -107,6 +108,19 @@ ScreenManagement:
 			#pos: (100,50)
 			pos_hint: {'x':.3, 'y':.025}
 
+        Label:
+			text: 'Characters'
+			font_name: 'fonts\8-BIT.ttf'
+            font_size: 20
+			pos_hint:{'center_x':.5, 'y':-.2}
+
+        Label:
+			text: 'There are 8 playable characters in the game, 4 of which are good and 4 are evil. You can choose the characters based on test to determine whether\nyou are a savior or destroyer.'
+			font_name: 'fonts\Halo3.ttf'
+            font_size: 10
+			pos_hint: {'x':.3, 'y':-.3}
+
+
 
 
 <RegisterScreen>:
@@ -129,6 +143,11 @@ ScreenManagement:
 			text: 'Choose Username'
 			font_size: 20
 			pos_hint: {'center_x':.5, 'y':.25}
+
+        TextInput:
+            text: 'Username'
+            size_hint: (.1, .1)
+            pos_hint: (100,100)
 
         Label:
 			text: 'Enter Password'
