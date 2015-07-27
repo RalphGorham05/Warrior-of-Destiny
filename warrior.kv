@@ -126,9 +126,13 @@ ScreenManagement:
 <RegisterScreen>:
     name: 'register'
 	FloatLayout:
-	
-		username_box: username
-		password_box: password
+
+		Image:
+            source: 'Game\images\world_map.jpg'
+            allow_stretch: True
+            keep_ratio: False
+            size_hint: 1, 1
+            pos_hint: {'center_x':.5, 'center_y': .5}
 
 		Button:
 			on_release: app.root.current = 'home'
@@ -147,7 +151,7 @@ ScreenManagement:
 			font_size: 20
 			pos_hint: {'center_x':.37, 'y':.13}
 
-       
+
 		TextInput:
 			id: username
 			size_hint: (.2, .05)
@@ -157,7 +161,7 @@ ScreenManagement:
 			text: 'Enter Password'
 			font_size: 20
 			pos_hint: {'center_x':.37, 'y':.07}
-			
+
 		TextInput:
 			id: password
 			size_hint: (.2, .05)
@@ -168,29 +172,29 @@ ScreenManagement:
 			text: 'Confirm Password'
 			font_size: 20
 			pos_hint: {'center_x':.37, 'y':.015}
-			
+
 		TextInput:
 			id: c_password
 			size_hint: (.2, .05)
             pos_hint: {'center_x':.6, 'y':.49}
 			password: True
-			
+
 		Button:
 			id: register_button
 			on_press: root.validate_password(register_button, password, c_password)
 			text: 'Register'
 			font_size: 10
-			size_hint:(.25, .1)
-			pos_hint: {'center_x':.37, 'y':.08}
-			
+			size_hint:(.15, .15)
+			pos_hint: {'center_x':.37, 'y':.1}
+
 		Button:
 			id: reset_button
 			on_press: root.reset(register_button)
 			text: 'Reset'
 			font_size: 10
-			size_hint:(.25, .1)
-			pos_hint: {'center_x':.65, 'y':.08}
-			
+			size_hint:(.15, .15)
+			pos_hint: {'center_x':.65, 'y':.1}
+
 
 
 

@@ -34,12 +34,16 @@ class RegisterScreen(Screen):
         if len(pw.text) > 0:
             if (pw.text == pw_confirm.text):
                 self.font_size = 50
+                self.background_color = (0,128,0,1)
             else:
                 self.text = 'Password do not match'
                 self.disabled = True
+                self.background_color = (255,0,0,1)
 
     def reset(default, button):
         button.disabled = False
+        button.background_color = (1,0,1,1)
+        button.text = 'Register'
         
     
 
