@@ -1,3 +1,15 @@
+NPC AI|
+________
+
+states
+	-Attack
+	-Defend
+  
+
+
+
+
+--------------------------------
 logic - using a potion:
 
 the way im thinking of it is, attacking the enemy is sort of the last resort for the npc. It's priority 
