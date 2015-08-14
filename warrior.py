@@ -20,6 +20,7 @@ class CustomLayout(FloatLayout):
         super(CustomLayout, self).__init__(**kwargs)
 
 
+
 class HomeScreen(Screen):
     pass
 
@@ -35,6 +36,9 @@ class RegisterScreen(Screen):
             if (pw.text == pw_confirm.text):
                 self.font_size = 50
                 self.background_color = (0,128,0,1)
+                print sm.screens
+                screenChange('story')
+                
             else:
                 self.text = 'Password do not match'
                 self.disabled = True
@@ -50,8 +54,20 @@ class RegisterScreen(Screen):
 class ContinueScreen(Screen):
     pass
 
-class ScreenManagement(ScreenManager):
+class StoryScreen(Screen):
     pass
+
+#class ScreenManagement(ScreenManager):
+    #pass
+
+sm = ScreenManager()
+
+sm.add_widget(HomeScreen)
+
+
+def screenChange(new):
+    sm.current = new
+    
 
 presentation = Builder.load_file("warrior.kv")
 
