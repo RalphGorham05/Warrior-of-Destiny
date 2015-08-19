@@ -1,9 +1,27 @@
+speed 
+	- determines likelihood of attack/dodge success
+strength 
+	- determines amount of dmg given/taken
+luck	
+	- determines critical strike chance
+iq	
+	- determines rate of xp increase
+chi 
+	- determines AP capacity and regeneration rate
+stealth 
+	- determines first hit chance
+			
+
+
+
+
 NPC AI|
 ________
 
 states
 	-Attack
 	-Defend
+		-
   
 
 
