@@ -7,6 +7,7 @@ ScreenManagement:
     HelpScreen:
 	RegisterScreen:
     ContinueScreen:
+	StoryScreen:
 
 <CustomLayout>
     canvas.after:
@@ -180,12 +181,12 @@ ScreenManagement:
 			password: True
 
 		Button:
-			id: register_button
+			id: validate_button
 			on_press: root.validate_password(register_button, password, c_password)
-			text: 'Register'
+			text: 'Confirm password matches'
 			font_size: 10
 			size_hint:(.15, .15)
-			pos_hint: {'center_x':.37, 'y':.1}
+			pos_hint: {'center_x':.37, 'y':.2}
 
 		Button:
 			id: reset_button
@@ -193,13 +194,33 @@ ScreenManagement:
 			text: 'Reset'
 			font_size: 10
 			size_hint:(.15, .15)
-			pos_hint: {'center_x':.65, 'y':.1}
+			pos_hint: {'center_x':.65, 'y':.2}
+			
+		Button:
+			id: register_button
+			on_press: root.register()
+			text: 'Join the Warrior ranks'
+			font_size: 10
+			size_hint:(.15, .15)
+			pos_hint: {'center_x':.37, 'y':.025}
 
 
 
 
 <ContinueScreen>:
     name: 'continue'
+	FloatLayout:
+		size: (800,800)
+		Button:
+			on_release: app.root.current = 'home'
+			text: 'Press here to go back home'
+			font_size: 10
+			size_hint:(.25, .1)
+			pos: (0,550)
+			
+
+<StoryScreen>:
+    name: 'story'
 	FloatLayout:
 		size: (800,800)
 		Button:
