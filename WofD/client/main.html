@@ -1,13 +1,22 @@
 <head>
-  <title>simple</title>
+  <title>Warrior of Destiny</title>
 </head>
 
 <body>
-  <h1>Welcome to Meteor!</h1>
+  <h1>Warrior of Destiny</h1>
 
-  {{> hello}}
+  {{> mainBox}}
   {{> info}}
 </body>
+
+<template name = 'mainBox'>
+
+  <ul>
+    <li><a class="btn btn-primary btn-lg" href="#" role="button">Join the Warrior Ranks</a></li>
+    <li><a class="btn btn-primary btn-lg" href="#" role="button">Continued Saved Game</a></li>
+    <li><a class="btn btn-primary btn-lg" href="#" role="button">Help</a></li>
+  </ul>
+</template>
 
 <template name="hello">
   <button>Click Me</button>
