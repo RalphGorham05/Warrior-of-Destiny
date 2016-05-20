@@ -3,19 +3,20 @@
 </head>
 
 <body>
-  <h1>Warrior of Destiny</h1>
-
   {{> mainBox}}
-  {{> info}}
+
 </body>
 
 <template name = 'mainBox'>
+  <div id = 'main_container'>
+    <h1>Warrior of Destiny</h1>
 
-  <ul>
-    <li><a class="btn btn-primary btn-lg" href="#" role="button">Join the Warrior Ranks</a></li>
-    <li><a class="btn btn-primary btn-lg" href="#" role="button">Continued Saved Game</a></li>
-    <li><a class="btn btn-primary btn-lg" href="#" role="button">Help</a></li>
-  </ul>
+    <ul>
+      <li><a class="btn btn-primary btn-lg" href="#" role="button">Join the Warrior Ranks</a></li>
+      <li><a class="btn btn-primary btn-lg" href="#" role="button">Continued Saved Game</a></li>
+      <li><a class="btn btn-primary btn-lg" href="#" role="button">Help</a></li>
+    </ul>
+  </div>
 </template>
 
 <template name="hello">
