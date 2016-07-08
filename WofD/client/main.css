@@ -1,1 +1,18 @@
 /* CSS declarations go here */
+#header
+{
+  height: 1em;
+	width: 100%;
+
+	margin-top:0;
+	margin-right:auto;
+	margin-bottom:0.2em;
+	margin-left:auto;
+
+	font-family:oldStyleFont;
+	font-size:4.5em;
+	color:silver;
+	text-shadow: 1px 1px blue;
+
+	background-color:transparent;
+}
