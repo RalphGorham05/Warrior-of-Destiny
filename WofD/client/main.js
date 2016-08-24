@@ -3,20 +3,29 @@ import { ReactiveVar } from 'meteor/reactive-var';
 
 import './main.html';
 
-Template.hello.onCreated(function helloOnCreated() {
-  // counter starts at 0
-  this.counter = new ReactiveVar(0);
+
+var Animal = new Class({
+    initialize: function(age){
+        this.age = age;
+    }
+});
+var Cat = new Class({
+    Extends: Animal,
+    initialize: function(name, age){
+        this.parent(age); // calls initalize method of Animal class
+        this.name = name;
+    }
 });
 
-Template.hello.helpers({
-  counter() {
-    return Template.instance().counter.get();
-  },
-});
 
-Template.hello.events({
-  'click button'(event, instance) {
-    // increment the counter when button is clicked
-    instance.counter.set(instance.counter.get() + 1);
-  },
+
+Template.mainBox.events({
+  'click': function(event, template) {
+
+  	event.preventDefault();
+
+    var myCat = new Cat('Micia', 20);
+    alert(myCat.name); // alerts 'Micia'.
+    alert(myCat.age); // alerts 20.
+  }
 });
