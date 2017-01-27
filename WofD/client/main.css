@@ -1,4 +1,5 @@
 /* CSS declarations go here */
+<<<<<<< HEAD
 
 html
 {
@@ -27,3 +28,9 @@ header
 }
 
 
+=======
+#main_container
+{
+	background-image:url('/img/world_map.jpg');
+}
+>>>>>>> 773f6f06c603ee88a4d27d11befc3abddc6d5bef
