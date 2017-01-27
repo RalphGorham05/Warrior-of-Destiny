@@ -1,5 +1,14 @@
 /* CSS declarations go here */
-#header
+
+html
+{
+	background-image: url('../images/world_map.jpg');
+	background-size: cover;
+
+}
+
+
+header
 {
   height: 1em;
 	width: 100%;
@@ -16,3 +25,5 @@
 
 	background-color:transparent;
 }
+
+
